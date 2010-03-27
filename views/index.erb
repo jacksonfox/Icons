@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Icons</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>                                                
+<link type="text/css" href="/styles/icons.css" rel="stylesheet" media="screen">
+<style type="text/css">  
+  ul.icons {
+    display: inline-block;
+  }                        
+</style>    
+</head>
+<body>
+  <h1>My Icon Library</h1>  
+  <ul class="sets">
+  <% @icon_sets.each do |set| %>
+    <li>
+      <h2><a href="<%= set.url %>"><%= set.name %></a> by <%= set.creator %> (<%= set.size %> icons)</h2>
+      <ul class="icons">  
+        <% set.icons[0..3].each do |icon| %>
+          <li><img src="<%= icon.path %>"></li>
+        <% end %>
+      </ul>
+      <ul class="tags">             
+        <% set.keywords.each do |tag| %>
+          <li><%= tag %></li>
+        <% end %>
+      </ul>        
+    </li>
+  <% end %>
+  </ul>
+</body>
+</html>

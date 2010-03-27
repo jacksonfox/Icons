@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Icons</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>                                                
+<link type="text/css" href="/styles/icons.css" rel="stylesheet" media="screen">
+</head>
+<body>
+  <h1><%= @icon_set.name %> <span class="setcount">(<%= @icon_set.size %> icons)</span></h1>  
+  <ul class="icons">
+  <% @icon_set.icons.each do |icon| %>
+    <li><a href="<%= icon.path %>"><img src="<%= icon.path %>"></a></li>
+  <% end %>
+  </ul>      
+  <p><b>Creator:</b> <a href="<%= @icon_set.download %>"><%= @icon_set.creator %></a></p>
+  <% unless @icon_set.description.empty? %>
+  <div class="description">                                                                               
+    <%= @icon_set.description %>
+  </div>
+  <% end %>
+  <p><a class="backbutton" href="/">&laquo; Back home</a></p>
+</body>
+</html>

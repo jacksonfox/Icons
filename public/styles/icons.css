@@ -1,0 +1,120 @@
+/* Base Styles
+---------------------------------------------------------- */
+
+html { 
+  height: 100%;
+}             
+
+body {       
+  margin: 50px;
+  color: #fff;
+  background: #444;
+  background: -webkit-gradient(linear, left top, left bottom, from(#444444), to(#111111)) no-repeat fixed;
+  background: -moz-linear-gradient(left top, #444444, #111111);
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "museo", serif;
+  text-shadow: 1px 1px 0px #000;
+}                    
+
+a {
+  color: #fff;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  color: #777;
+  list-style: none;
+  margin-bottom: .5em;
+}   
+
+/* Type Styles
+---------------------------------------------------------- */
+
+.setcount {
+  color: #777;
+} 
+
+.description { 
+  color: #ccc;
+}    
+
+/* List of Icon Sets
+---------------------------------------------------------- */
+
+ul.sets li a {
+  text-shadow: 1px 1px 0px #000;    
+}   
+
+ul.sets li {
+  margin-bottom: 2em;
+}                
+
+/* Icon Display
+---------------------------------------------------------- */
+
+ul.icons {
+  background: #fff;
+  border: 10px solid #aaa;
+  overflow: hidden;
+  padding: 10px;
+  -webkit-box-shadow: 0px 0px 3px #111;    
+}   
+                     
+ul.icons li { 
+  float: left; 
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+/* Icon Set Tags
+---------------------------------------------------------- */     
+
+ul.tags {
+  overflow: hidden;
+  margin-top: .5em;
+}   
+          
+ul.tags li {
+  float: left;
+  padding: 5px 10px;
+  margin: 0 .5em 1px 0;  
+  color: #fff;
+  font-size: 10px;
+  font-family: verdana;
+  text-transform: lowercase;   
+  background: -webkit-gradient(linear, left top, left bottom, from(#3C668E), to(#2C4A67));          
+  -webkit-box-shadow: 1px 1px 0px #000;
+  -webkit-border-radius: 3px;
+}
+
+/* Utility Classes
+---------------------------------------------------------- */
+    
+.backbutton {
+  text-decoration: none;
+  display: inline-block;
+  background: #8CBF26; 
+  background: -webkit-gradient(linear, left top, left bottom, from(#79A621), to(#5D7F19));          
+  padding: 5px 10px;
+  -webkit-border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 3px #111;
+  margin: 1em 0;
+  font-family: "museo slab", serif;
+  text-transform: uppercase;
+  -webkit-transition: -webkit-box-shadow 0.3s linear;    
+}    
+
+.backbutton:hover {
+  -webkit-box-shadow: 0px 0px 8px #000;
+}                                                                             
+
+          
+    
