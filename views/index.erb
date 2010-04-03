@@ -7,15 +7,29 @@
 <style type="text/css">  
   ul.icons {
     display: inline-block;
-  }                        
+  }                          
+  ul.icons img {
+    height: 32px;
+  }               
+  ul.sets li.set {
+    float: left;
+    width: 33%;
+  }            
+  ul.sets .set a {
+    display: block;
+  }    
+  ul.sets .setinfo {
+    font-family: "helvetica neue", helvetica, arial, sans-serif;
+    font-size: 18px;
+  }
 </style>    
 </head>
 <body>
   <h1>My Icon Library</h1>  
   <ul class="sets">
   <% @icon_sets.each do |set| %>
-    <li>
-      <h2><a href="<%= set.url %>"><%= set.name %></a> by <%= set.creator %> (<%= set.size %> icons)</h2>
+    <li class="set">
+      <h2><a href="<%= set.url %>"><%= set.name %></a> <span class="setinfo">by <%= set.creator %> (<%= set.size %> icons)</span></h2>
       <ul class="icons">  
         <% set.icons[0..3].each do |icon| %>
           <li><img src="<%= icon.path %>"></li>
